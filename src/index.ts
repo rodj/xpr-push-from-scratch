@@ -8,6 +8,7 @@ const pool = new pg.Pool();
 
 const app = express();
 const port = process.env.PORT || 3333;
+const aaa = process.env.DATABASE_URL;
 
 app.use(bodyParser.json());
 app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
@@ -16,7 +17,7 @@ app.use(bodyParser.text({ type: "text/html" }));
 app.get("/", async (req, res) => {
   // const { rows } = await pool.query("SELECT NOW()");
   // res.send(`Rodj says HELLOPUSH from the root of this app. URL=${process.env.DATABASE_URL} | The time from the DB is ${rows[0].now}`);
-  res.send(`Rodj says Banana2 from the root of this app. port=${port} URL=${process.env.DATABASE_URL}`);
+  res.send(`Rodj says Banana Add aaa from the root of this app. port=${port} bogus=${aaa} URL=${process.env.DATABASE_URL}`);
 });
 
 app.listen(port, () => {

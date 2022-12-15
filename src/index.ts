@@ -16,7 +16,7 @@ app.use(bodyParser.text({ type: "text/html" }));
 app.get("/", async (req, res) => {
   // const { rows } = await pool.query("SELECT NOW()");
   // res.send(`Rodj says HELLOPUSH from the root of this app. URL=${process.env.DATABASE_URL} | The time from the DB is ${rows[0].now}`);
-  res.send(`Rodj says HELLOPUSH1005 from the root of this app. URL=${process.env.DATABASE_URL}`);
+  res.send(`Rodj says Banana2 from the root of this app. port=${port} URL=${process.env.DATABASE_URL}`);
 });
 
 app.listen(port, () => {

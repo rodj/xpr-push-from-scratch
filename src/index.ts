@@ -16,7 +16,7 @@ app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
   const { rows } = await pool.query("SELECT NOW()");
-  res.send(`Rodj 20230121_092835 says HELLOPUSH from the root of this app. URL=${process.env.DATABASE_URL} | The time from the DB is ${rows[0].now}`);
+  res.send(`Rodj 20230121_0948 Apple says HELLOPUSH from the root of this app. URL=${process.env.DATABASE_URL} | The time from the DB is ${rows[0].now}`);
   //res.send(`Rodj says Crepe why do I still not see envvars? from the root of this app. port=${port} bogus=${aaa} URL=${process.env.DATABASE_URL}`);
 });
 
